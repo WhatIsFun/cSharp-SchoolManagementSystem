@@ -9,19 +9,18 @@ namespace cSharp_SchoolManagementSystem
 {
     internal class Teacher
     {
-        private int teacherId;
+        private int TeacherId;
         private List<string> subjects;
 
-        // Define a constructor to initialize these fields and call the base class constructor
-        public Teacher(string name, int age, string address, int teacherId) : base(name, age, address)
+        public Teacher(string Name, int Age, string Birthday, string Address, string TeacherID) : base(Name, Age, Birthday, Address)
         {
-            this.teacherId = teacherId;
-            subjects = new List<string>(); // Create an empty list of subjects
+            this.TeacherID = TeacherID;
+            subjects = new List<string>(); 
         }
         public override void Display()
         {
-            base.Display(); // Call the base class display method
-            Console.WriteLine("Teacher ID: {0}", teacherId);
+            base.Display();
+            Console.WriteLine("Teacher ID: {0}", TeacherId);
             Console.WriteLine("Subjects assigned:");
             foreach (string subject in subjects)
             {
@@ -30,9 +29,9 @@ namespace cSharp_SchoolManagementSystem
         }
         public void Assign(string subject)
         {
-            if (!subjects.Contains(subject)) // Check if the subject is not already in the list
+            if (!subjects.Contains(subject)) // To check if the subject in the list
             {
-                subjects.Add(subject); // Add the subject to the list
+                subjects.Add(subject); 
                 Console.WriteLine("{0} assigned to teach {1}", Name, subject);
             }
             else
