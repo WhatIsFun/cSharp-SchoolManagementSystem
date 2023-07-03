@@ -9,9 +9,9 @@ namespace cSharp_SchoolManagementSystem
 {
     internal class Student : Person
     {
-        private string StudentID;
-        private string Grade;
-        private List<Course> courses;
+        public string StudentID;
+        public string Grade;
+        public List<Course> courses;
 
         public Student(string Name, int Age, string Birthday, string Address, string StudentID, string Grade) : base(Name, Age, Birthday, Address)
         {
@@ -19,10 +19,10 @@ namespace cSharp_SchoolManagementSystem
             this.Grade = Grade;
             courses = new List<Course>();
         }
-        public List<Course> Courses
-        {
-            get { return courses; }
-        }
+        //public List<Course> Courses
+        //{
+        //    get { return courses; }
+        //}
         public override void Display()
         {
             base.Display(); // To call the display method on Person (base) class

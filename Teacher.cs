@@ -7,10 +7,10 @@ using System.Xml.Linq;
 
 namespace cSharp_SchoolManagementSystem
 {
-    internal class Teacher
+    internal class Teacher :Person
     {
-        private int TeacherId;
-        private List<string> subjects;
+        public string TeacherID;
+        public List<string> subjects;
 
         public Teacher(string Name, int Age, string Birthday, string Address, string TeacherID) : base(Name, Age, Birthday, Address)
         {
@@ -20,7 +20,7 @@ namespace cSharp_SchoolManagementSystem
         public override void Display()
         {
             base.Display();
-            Console.WriteLine("Teacher ID: {0}", TeacherId);
+            Console.WriteLine("Teacher ID: {0}", TeacherID);
             Console.WriteLine("Subjects assigned:");
             foreach (string subject in subjects)
             {

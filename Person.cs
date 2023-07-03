@@ -8,10 +8,10 @@ namespace cSharp_SchoolManagementSystem
 {
     internal class Person
     {
-        private string Name { get; set; }
-        private string Address { get; set; }
-        private int Age { get; set; }
-        private string Birthday { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public int Age { get; set; }
+        public string Birthday { get; set; }
 
         public Person(string Name, int Age, string Birthday, string Address)
         {
